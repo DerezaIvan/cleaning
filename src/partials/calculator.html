@@ -1,0 +1,116 @@
+<section class="calculator" id="calculator">
+  <div class="calculator__container">
+    <h2 class="calculator__title section-title">Рассчитайте стоимость</h2>
+    <div class="calculator__layout">
+      <div class="calculator__form calc-form">
+        <div class="calc-form__group">
+          <label class="calc-form__label">Тип уборки</label>
+          <div class="calc-form__chips">
+            <button
+              class="calc-form__chip calc-form__chip--active"
+              data-type="weekly"
+              onclick="selectCleaningType(this)"
+            >
+              <svg class="calc-form__chip-icon" width="20" height="20"><use href="/icons/sprite.svg#home"></use></svg>
+              <span class="calc-form__chip-text">Поддерживающая</span>
+            </button>
+            <button
+              class="calc-form__chip"
+              data-type="deep"
+              onclick="selectCleaningType(this)"
+            >
+              <svg class="calc-form__chip-icon" width="20" height="20"><use href="/icons/sprite.svg#sparkles"></use></svg>
+              <span class="calc-form__chip-text">Генеральная</span>
+            </button>
+            <button
+              class="calc-form__chip"
+              data-type="renovation"
+              onclick="selectCleaningType(this)"
+            >
+              <svg class="calc-form__chip-icon" width="20" height="20"><use href="/icons/sprite.svg#hammer"></use></svg>
+              <span class="calc-form__chip-text">После ремонта</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="calc-form__group">
+          <label class="calc-form__label">Количество комнат</label>
+          <div class="calc-form__select-wrapper">
+            <select
+              class="calc-form__select"
+              id="roomSelect"
+              onchange="calculatePrice()"
+            >
+              <option value="1">1 комната</option>
+              <option value="2" selected>2 комнаты</option>
+              <option value="3">3 комнаты</option>
+              <option value="4">4+ комнаты</option>
+            </select>
+            <svg class="calc-form__select-arrow" width="20" height="20"><use href="/icons/sprite.svg#chevron-down"></use></svg>
+          </div>
+        </div>
+
+        <div class="calc-form__group">
+          <label class="calc-form__label">Есть домашние животные?</label>
+          <div class="calc-form__toggles">
+            <button
+              class="calc-form__toggle calc-form__toggle--active"
+              data-pets="no"
+              onclick="selectPets(this)"
+            >
+              Нет
+            </button>
+            <button
+              class="calc-form__toggle"
+              data-pets="yes"
+              onclick="selectPets(this)"
+            >
+              Да
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator__result calc-result">
+        <div class="calc-result__header">
+          <div class="calc-result__icon" id="resultIcon">
+            <svg width="24" height="24"><use href="/icons/sprite.svg#home"></use></svg>
+          </div>
+          <div>
+            <div class="calc-result__type" id="resultType">
+              Поддерживающая
+            </div>
+            <div class="calc-result__rooms" id="resultRooms">
+              2 комнаты
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-result__price-block">
+          <span class="calc-result__label">Примерная стоимость</span>
+          <div class="calc-result__price">
+            <span class="calc-result__amount" id="priceAmount"
+              >3 500</span
+            >
+            <span class="calc-result__currency">₽</span>
+          </div>
+        </div>
+
+        <p class="calc-result__note">
+          Итоговая стоимость может незначительно отличаться в зависимости
+          от состояния помещения и дополнительных пожеланий.
+        </p>
+
+        <a
+          href="https://wa.me/79001234567?text=Здравствуйте! Хочу заказать уборку."
+          target="_blank"
+          class="calc-result__button button button--primary button--large"
+          id="orderButton"
+        >
+          <span>ОФОРМИТЬ ЗАКАЗ</span>
+          <svg class="button__icon" width="20" height="20"><use href="/icons/sprite.svg#arrow-right"></use></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

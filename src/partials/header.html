@@ -1,0 +1,67 @@
+<header class="header">
+  <div class="header__container">
+    <a
+      href="#"
+      class="header__logo"
+      onclick="
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return false;
+      "
+    >
+      <svg class="header__logo-icon" width="28" height="28"><use href="/icons/sprite.svg#logo"></use></svg>
+      <span class="header__logo-text">ЧИСТЫЙ ДОМ</span>
+    </a>
+
+    <nav class="header__nav">
+      <a href="#services" class="header__link">УСЛУГИ</a>
+      <a href="#why-us" class="header__link">ПОЧЕМУ МЫ</a>
+      <a href="#calculator" class="header__link">КАЛЬКУЛЯТОР</a>
+      <a href="#faq" class="header__link">FAQ</a>
+    </nav>
+
+    <a href="#calculator" class="header__button button button--primary"
+      >ЗАКАЗАТЬ УБОРКУ</a
+    >
+
+    <button
+      class="header__burger"
+      aria-label="Открыть меню"
+      onclick="toggleMobileMenu()"
+    >
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </button>
+  </div>
+
+  <!-- Мобильное меню -->
+  <div class="header__mobile-menu" id="mobileMenu">
+    <a
+      href="#services"
+      class="header__mobile-link"
+      onclick="closeMobileMenu()"
+      >УСЛУГИ</a
+    >
+    <a
+      href="#why-us"
+      class="header__mobile-link"
+      onclick="closeMobileMenu()"
+      >ПОЧЕМУ МЫ</a
+    >
+    <a
+      href="#calculator"
+      class="header__mobile-link"
+      onclick="closeMobileMenu()"
+      >КАЛЬКУЛЯТОР</a
+    >
+    <a href="#faq" class="header__mobile-link" onclick="closeMobileMenu()"
+      >FAQ</a
+    >
+    <a
+      href="#calculator"
+      class="button button--primary"
+      onclick="closeMobileMenu()"
+      >ЗАКАЗАТЬ УБОРКУ</a
+    >
+  </div>
+</header>
