@@ -77,7 +77,7 @@
 @media (max-width: 1023px) {
   .hero__3d {
     width: 100%;
-    opacity: 0.25;
+    opacity: 0.5;
   }
 
   .hero__3d::before {
