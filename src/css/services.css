@@ -30,6 +30,14 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .services__grid > :nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    max-width: calc(50% - 12px);
+  }
+}
+
 @media (min-width: 1024px) {
   .services__grid {
     grid-template-columns: repeat(3, 1fr);
