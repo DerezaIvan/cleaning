@@ -286,6 +286,8 @@ function init3DScene() {
     metalness: 0.0,
     clearcoat: 1.0,
     clearcoatRoughness: 0.1,
+    transparent: true,
+    opacity: 0.5,
   });
 
   // Объекты
