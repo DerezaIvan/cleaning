@@ -243,13 +243,6 @@ function init3DScene() {
   const container = document.getElementById("hero3d");
   if (!container) return;
 
-  // Проверяем мобильное устройство
-  const isMobile = window.matchMedia("(pointer: coarse)").matches;
-  if (isMobile) {
-    container.style.display = "none";
-    return;
-  }
-
   // Three.js импортирован как модуль
   if (!THREE) {
     console.warn("Three.js не загружен");
@@ -257,7 +250,6 @@ function init3DScene() {
   }
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color("#FFFFFF");
 
   const camera = new THREE.PerspectiveCamera(
     50,
